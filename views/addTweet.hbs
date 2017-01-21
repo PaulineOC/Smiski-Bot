@@ -1,8 +1,47 @@
-ADD A NEW TWEET
-<form>
-
-
-
-
-
-</form>
+<h1>ADD A NEW TWEET</h1>
+<p>
+	<form method = "POST" action='add-tweet' id="addTweet" enctype="multipart/form-data">
+		<div>
+			Tweet Text
+			<BR>
+			{{!-- Add textcount --}} 
+			<textarea name="tweetText" form="addTweet" maxlength="140" cols='50' style="resize:none; font-size:16px;"></textarea>
+		</div>
+		<div>
+			Tweet Image
+			<BR>
+			<input type="file" name="pic" accept="image/*">
+		</div>
+		<div>
+			Tweet Post Date
+			<blockquote>
+				Month:
+				  <input list="month" name="month">
+				{{!-- For Safari and other browser compatability -- to add later:  --}}
+				{{!-- https://github.com/Fyrd/purejs-datalist-polyfill--}}
+				{{!--http://stackoverflow.com/questions/27494084/html5-datalist-tag-is-not-populating-in-safari--}}
+				    <datalist id="month">
+						<option value="January">January</option>
+						<option value="February">February</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+					</dataList>
+				<BR>
+				Day:
+				<input type="number" name="day" min="1" max="31">
+				<BR>
+				Year:
+				<input type="number" name="year" min={{currYear}}>
+			</blockquote>
+		</div>
+		<input type="submit" value="Submit">
+	</form>
+</p>

@@ -3,7 +3,7 @@ var mongoose = require ('mongoose');
 
 var TweetMongo = new mongoose.Schema({
 	text: String,
-	picPath: String,
+	pic: String,
 	month: Number,
 	day: Number,
 	year: Number,
