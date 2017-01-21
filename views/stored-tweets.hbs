@@ -1,0 +1,37 @@
+
+hIHIHIIH
+
+<div class = "tweetTable">
+	<div class= "tableHeader">
+		<div class="col">
+			Tweet Date
+		</div>
+		<div class="col">
+			Image
+		</div>
+		<div class="col">
+			Tweet Text
+		</div>	
+	</div>
+	<div class= "tableRow">
+		{{#each allTweets}}
+		<div>
+			Month: {{{this.month}}}
+			<BR>
+			Day: {{{this.day}}}
+			<BR>
+			Year: {{{this.year}}}
+		</div>
+		<div>
+			<img src="{{{this.picPath}}}"> s
+		</div>
+		<div>
+			{{{this.text}}}
+		</div>
+
+		{{/each }}
+		
+	</div>
+	
+
+</div>
