@@ -1,8 +1,14 @@
 
-hIHIHIIH
+<H1>All Stored Tweets</H1>
+
+<h3><a href="./add-tweet">ADD TWEET</a></h3>
+
+<a class="twitter-timeline" data-width="250" data-height="500" href="https://twitter.com/Smiski_Says">Tweets by Smiski_Says</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <div class = "tweetTable">
-	<div class= "tableHeader">
+
+
+	<div id= "tableHeader" style="display:table-row;">
 		<div class="col">
 			Tweet Date
 		</div>
@@ -13,25 +19,19 @@ hIHIHIIH
 			Tweet Text
 		</div>	
 	</div>
-	<div class= "tableRow">
-		{{#each allTweets}}
-		<div>
-			Month: {{{this.month}}}
-			<BR>
-			Day: {{{this.day}}}
-			<BR>
-			Year: {{{this.year}}}
+	{{#each allTweets}}
+		<div class= "tableRow" style="display:table-row;">
+			<div class="col" id="date">
+				{{{this.date}}}
+			</div>
+			<div class="col, tweetImage">
+			</div>
+			<div class="col">
+				{{{this.text}}}
+			</div>
 		</div>
-		<div>
-			<img src="{{{this.picPath}}}"> s
-		</div>
-		<div>
-			{{{this.text}}}
-		</div>
-
-		{{/each }}
-		
-	</div>
+	{{/each }}
 	
-
 </div>
+
+<script src="./javascripts/storedTweets.js"></script>

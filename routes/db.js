@@ -4,9 +4,7 @@ var mongoose = require ('mongoose');
 var TweetMongo = new mongoose.Schema({
 	text: String,
 	pic: String,
-	month: Number,
-	day: Number,
-	year: Number,
+	date: {type: Date},
 });
 
 mongoose.model('TweetMongo', TweetMongo);
