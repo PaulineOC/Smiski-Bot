@@ -15,7 +15,14 @@ var upload = multer({ storage: multer.memoryStorage({}) });
 
 //Twitter Stuff
 var Twit = require('twit');
-var config = require('./config');//
+var config = {
+	 consumer_key: process.env.Twitter_consumer_key,
+	 consumer_secret: process.env.Twitter_consumer_secret,
+	 access_token: process.env.Twitter_access_token,
+	 access_token_secret: process.env.Twitter_access_token_secret,
+};
+
+
 var T=new Twit(config);
 
 
