@@ -14,12 +14,14 @@ var upload = multer({ storage: multer.memoryStorage({}) });
 //var upload2 = multer({ dest: './public/uploads/' });
 
 //Twitter Stuff
+
+console.log(process.env);
 var Twit = require('twit');
 var config = {
-	 consumer_key: process.env.Twitter_consumer_key,
-	 consumer_secret: process.env.Twitter_consumer_secret,
-	 access_token: process.env.Twitter_access_token,
-	 access_token_secret: process.env.Twitter_access_token_secret,
+	consumer_key: process.env.Twitter_consumer_key+'',
+	consumer_secret: process.env.Twitter_consumer_secret,
+	access_token: process.env.Twitter_access_token,
+	access_token_secret: process.env.Twitter_access_token_secret,
 };
 
 
